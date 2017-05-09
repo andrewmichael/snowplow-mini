@@ -16,6 +16,7 @@ es_dir=$main_dir/elasticsearch
 
 # Packagaes
 kinesis_package=snowplow_kinesis_r78_great_hornbill.zip
+upgraded_sink_package=snowplow_kinesis_elasticsearch_sink_0.8.0_1x.zip
 iglu_server_package=iglu_server_0.2.0.zip
 kibana_v=4.0.1
 
@@ -34,6 +35,13 @@ sudo apt-get install oracle-java7-installer -y
 
 wget http://dl.bintray.com/snowplow/snowplow-generic/${kinesis_package} -P $staging_dir
 unzip $staging_dir/${kinesis_package} -d $executables_dir
+
+##############################
+# Upgrade Elasticsearch Sink #
+##############################
+
+wget http://dl.bintray.com/snowplow/snowplow-generic/${upgraded_sink_package} -P $staging_dir
+unzip $staging_dir/${upgraded_sink_package} -d $executables_dir
 
 #######################
 # Install Iglu Server #

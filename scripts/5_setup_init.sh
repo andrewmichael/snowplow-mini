@@ -25,13 +25,13 @@ sudo cp $init_dir/snowplow_stream_enrich_0.7.0 /etc/init.d
 sudo chmod 0755 /etc/init.d/snowplow_stream_enrich_0.7.0
 sudo update-rc.d snowplow_stream_enrich_0.7.0 defaults
 
-sudo cp $init_dir/snowplow_elasticsearch_sink_good_0.5.0 /etc/init.d
-sudo chmod 0755 /etc/init.d/snowplow_elasticsearch_sink_good_0.5.0
-sudo update-rc.d snowplow_elasticsearch_sink_good_0.5.0 defaults
+sudo cp $init_dir/snowplow_elasticsearch_sink_good_0.8.0 /etc/init.d
+sudo chmod 0755 /etc/init.d/snowplow_elasticsearch_sink_good_0.8.0
+sudo update-rc.d snowplow_elasticsearch_sink_good_0.8.0 defaults
 
-sudo cp $init_dir/snowplow_elasticsearch_sink_bad_0.5.0 /etc/init.d
-sudo chmod 0755 /etc/init.d/snowplow_elasticsearch_sink_bad_0.5.0
-sudo update-rc.d snowplow_elasticsearch_sink_bad_0.5.0 defaults
+sudo cp $init_dir/snowplow_elasticsearch_sink_bad_0.8.0 /etc/init.d
+sudo chmod 0755 /etc/init.d/snowplow_elasticsearch_sink_bad_0.8.0
+sudo update-rc.d snowplow_elasticsearch_sink_bad_0.8.0 defaults
 
 sudo cp $init_dir/iglu_server_0.2.0 /etc/init.d
 sudo chmod 0755 /etc/init.d/iglu_server_0.2.0

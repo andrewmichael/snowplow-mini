@@ -66,11 +66,17 @@ sink {
   }
 
   elasticsearch {
-    cluster-name: "elasticsearch"
-    endpoint: "localhost"
-    max-timeout: "10000"
-    index: "good" # Elasticsearch index name
-    type: "good" # Elasticsearch type name
+    client {
+      type: "transport"
+      endpoint: "localhost"
+      port: "9300"
+      max-timeout: "10000"
+    }
+    cluster {
+      name: "elasticsearch"
+      index: "good" # Elasticsearch index name
+      type: "good" # Elasticsearch type name
+    }
   }
 
   # Events are accumulated in a buffer before being sent to Elasticsearch.
