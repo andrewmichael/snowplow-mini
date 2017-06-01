@@ -19,6 +19,7 @@
   "devDependencies": {
     "browserify": "^14.3.0",
     "typescript": "^2.2.2",
+    "uglify-js": "^3.0.15",
     "uglifyjs": "^2.4.10"
   }
 }

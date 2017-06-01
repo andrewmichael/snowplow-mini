@@ -15,33 +15,33 @@ executables_dir=$main_dir/bin
 es_dir=$main_dir/elasticsearch
 
 # Packagaes
-kinesis_package=snowplow_kinesis_r78_great_hornbill.zip
-upgraded_sink_package=snowplow_kinesis_elasticsearch_sink_0.8.0_1x.zip
+collector_package=snowplow_scala_stream_collector_0.9.0.zip
+enrich_package=snowplow_stream_enrich_0.10.0.zip
+sink_package=snowplow_kinesis_elasticsearch_sink_0.8.0_1x.zip
 iglu_server_package=iglu_server_0.2.0.zip
 kibana_v=4.0.1
 
 ##################
-# Install Java 7 #
+# Install Java 8 #
 ##################
 
 sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update
-echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-sudo apt-get install oracle-java7-installer -y
+echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+sudo apt-get install oracle-java8-installer -y
 
 ################################
 # Install Kinesis Applications #
 ################################
 
-wget http://dl.bintray.com/snowplow/snowplow-generic/${kinesis_package} -P $staging_dir
-unzip $staging_dir/${kinesis_package} -d $executables_dir
+wget http://dl.bintray.com/snowplow/snowplow-generic/${collector_package} -P $staging_dir
+unzip $staging_dir/${collector_package} -d $executables_dir
 
-##############################
-# Upgrade Elasticsearch Sink #
-##############################
+wget http://dl.bintray.com/snowplow/snowplow-generic/${enrich_package} -P $staging_dir
+unzip $staging_dir/${enrich_package} -d $executables_dir
 
-wget http://dl.bintray.com/snowplow/snowplow-generic/${upgraded_sink_package} -P $staging_dir
-unzip $staging_dir/${upgraded_sink_package} -d $executables_dir
+wget http://dl.bintray.com/snowplow/snowplow-generic/${sink_package} -P $staging_dir
+unzip $staging_dir/${sink_package} -d $executables_dir
 
 #######################
 # Install Iglu Server #
