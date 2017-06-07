@@ -21,14 +21,11 @@ sink_package=snowplow_kinesis_elasticsearch_sink_0.8.0_1x.zip
 iglu_server_package=iglu_server_0.2.0.zip
 kibana_v=4.0.1
 
-##################
-# Install Java 8 #
-##################
+#####################
+# Install OpenJDK 7 #
+#####################
 
-sudo add-apt-repository ppa:webupd8team/java -y
-sudo apt-get update
-echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-sudo apt-get install oracle-java8-installer -y
+sudo apt-get install openjdk-7-jdk -y
 
 ################################
 # Install Kinesis Applications #
