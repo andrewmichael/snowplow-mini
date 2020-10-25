@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "compile": "tsc -p js --outDir dist/ && browserify dist/SnowplowMiniApp.js -o dist/bundle.js && uglifyjs dist/bundle.js > dist/snowplow-mini.js"
+    "compile": "tsc -p js --outDir dist/ && browserify dist/SnowplowMiniApp.js -o dist/snowplow-mini.js"
   },
   "dependencies": {
     "director": "1.2.0",

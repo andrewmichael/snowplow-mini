@@ -26,7 +26,7 @@ export class Overview extends React.Component<{}, {}> {
     var collector: string = 'http://' + window.location.hostname + '/collector/';
     var kibana: string = 'http://' + window.location.hostname + '/kibana/';
     var head_plugin: string = 'http://' + window.location.hostname + '/elastic/_plugin/head';
-    var elasticsearch: string = 'http://' + window.location.hostname + '/eastic/';
+    var elasticsearch: string = 'http://' + window.location.hostname + '/elastic/';
 
     return (
       <div className="tab-content">
