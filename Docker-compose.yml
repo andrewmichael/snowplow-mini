@@ -3,11 +3,20 @@ services:
   snowplow-mini:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-snowplow
     ports:
-      - "80:80"
       - "8080:8080"
       - "8081:8081"
+      - "8082:8082"
       - "5601:5601"
-      - "9200:9200"
+      - "9200:9200"  
     restart: always
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile-proxy
+    ports:
+      - "80:80"
+    restart: always
+    depends_on:      
+      - snowplow-mini
