@@ -20,13 +20,12 @@
     "!node_modules/**"
   ],
   "files": [
-    "Interfaces.d.ts"
-  ],
-  "exclude": [
+    "Interfaces.d.ts",
     "SnowplowMiniApp.tsx",
     "components/Elasticsearch.tsx",
     "components/IgluServer.tsx",
     "components/JSTracker.tsx",
     "components/Overview.tsx"
-  ]
+  ],
+  "exclude": []
 }

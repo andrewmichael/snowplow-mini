@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "compile": "tsc -p js --outDir dist/ && browserify dist/SnowplowMiniApp.js -o dist/snowplow-mini.js"
+    "compile": "tsc -p js --outDir dist/ && browserify dist/SnowplowMiniApp.js -o dist/bundle.js && uglifyjs dist/bundle.js > dist/snowplow-mini.js"
   },
   "dependencies": {
     "director": "1.2.0",
@@ -19,6 +19,6 @@
   "devDependencies": {
     "browserify": "^14.3.0",
     "typescript": "^2.2.2",
-    "uglifyjs": "^2.4.10"
+    "uglify-js": "^3.11.4"
   }
 }
