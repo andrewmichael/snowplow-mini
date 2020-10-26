@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  snowplow-mini:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "8080:8080"
+      - "8081:8081"
+      - "5601:5601"
+      - "9200:9200"
+    restart: always
